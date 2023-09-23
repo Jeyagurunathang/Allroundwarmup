@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allround Warmup</title>
+
+    <link rel="icon" type="image/x-icon" href="./Image/favicon(1).ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Lato:wght@100;300;400;700&family=Lobster+Two:ital,wght@1,400;1,700&family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/0d9a118a86.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <script defer type="module" src="../src/main.js"></script>
+  </head>
+  <body>
+    <!-- Home page -->
+    <section class="home-section">
+      <header class="home-section__header">
+        <h2>Allround <span class="warmup">Warmup</span></h2>
+      </header>
+
+      <main class="home-main">
+        <h1 class="home-main__header">
+          Allround <span class="warmup">Warmup</span>
+        </h1>
+        <div class="home-main__btns">
+          <button class="btn add-question-btn">Add Questions</button>
+          <button class="btn start-practice-btn">Start Practicing</button>
+        </div>
+
+        <p class="intro-text">
+          A quick way to prepare for your next interview (or) mock in
+        </p>
+        <p class="topics">Java</p>
+        <p class="intro-text large-text">
+          Practice key questions, Create your own questions and practice to
+          improve your communication and confidence.
+        </p>
+      </main>
+    </section>
+
+    <!-- Add question in new topic or existing topic modal -->
+    <section class="overlay topic-choice">
+      <div class="question-btn">
+        <h2 class="question-btn__header">Add a Question</h2>
+        <div class="btns">
+          <button class="btn existing-topic__btn">Existing Topic</button>
+          <button class="btn new-topic__btn">New Topic</button>
+        </div>
+        <span class="close"><i class="fa-solid fa-circle-xmark"></i></span>
+      </div>
+    </section>
+
+    <!-- Adding questions on  existing topic form -->
+    <section class="existing-topic">
+      <form class="existing-topic__form">
+        <label class="existing-topic__label">Select the topic</label>
+
+        <select
+          class="existing-topics existing-topic__input"
+          name="selected_topic"
+        >
+          <!-- <option value="Js">Js</option> -->
+        </select>
+
+        <label for="question" class="existing-topic__label"
+          >How many questions to you want to add</label
+        >
+        <input
+          type="text"
+          id="question"
+          name="question"
+          class="existing-topic__input"
+        />
+        <button type="submit" class="btn next-btn">Next</button>
+
+        <span class="close"><i class="fa-solid fa-circle-xmark"></i></span>
+      </form>
+    </section>
+
+    <!-- Adding questions on new topic form -->
+    <section class="new-topic existing-topic">
+      <form class="new-topic__form existing-topic__form">
+        <label class="new-topic__label existing-topic__label"
+          >Enter the Topic</label
+        >
+        <input
+          type="text"
+          class="new-topic__input existing-topic__input topic"
+          name="topic"
+        />
+
+        <label class="new-topic__label existing-topic__label"
+          >How many questions to you want add?</label
+        >
+        <input
+          type="text"
+          class="existing-topic__input questions"
+          name="question"
+        />
+
+        <button class="btn next-btn">Next</button>
+        <span class="close"><i class="fa-solid fa-circle-xmark"></i></span>
+      </form>
+    </section>
+
+    <!-- Adding actual questions form -->
+    <section class="add-question">
+      <form class="questions-form">
+        <!-- <div>
+          <label class="existing-topic__label">Question: 1</label>
+          <input type="text" class="existing-topic__input mt-xlg" />
+        </div> -->
+        <button type="submit" class="btn next-btn questions-submit">
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <!-- Start practice form -->
+    <section class="start-practice existing-topic">
+      <form class="start-practice__form existing-topic__form">
+        <label class="existing-topic__label"
+          >Select the topic to practice</label
+        >
+
+        <select
+          class="existing-topics existing-topic__input"
+          name="selected_topic"
+        >
+          <!-- <option value="Js">Js</option> -->
+        </select>
+
+        <label for="question" class="existing-topic__label"
+          >How many questions to you want to practice</label
+        >
+        <input
+          type="text"
+          id="question"
+          name="question"
+          class="existing-topic__input"
+        />
+        <button type="submit" class="btn next-btn start-practice__btn">
+          Start
+        </button>
+        <span class="close"><i class="fa-solid fa-circle-xmark"></i></span>
+      </form>
+    </section>
+
+    <section class="question-shower">
+      <div class="question-shower__holder">
+        <h2 class="question-title">Question</h2>
+        <div class="other-btns">
+          <button class="btn answer-btn">&#127908; Answer</button>
+          <button class="btn stop-btn">Stop</button>
+          <button class="btn next-question__btn">&rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="end-screen">
+      <h2 class="quote_text">Thank You!</h2>
+      <a href="./index.html" class="btn next-btn home-btn">Home</a>
+    </section>
+  </body>
+</html>
